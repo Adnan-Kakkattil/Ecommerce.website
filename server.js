@@ -99,12 +99,12 @@ const server = createServer(async (req, res) => {
 
     const ext = extname(filePath).toLowerCase();
     const type = MIME[ext] ?? 'application/octet-stream';
-    const isHtml = ext === '.html';
+    const revalidate = ext === '.html' || ext === '.css' || ext === '.js';
 
     res.writeHead(200, {
       'Content-Type': type,
       'Content-Length': info.size,
-      'Cache-Control': isHtml ? 'no-cache' : 'public, max-age=86400',
+      'Cache-Control': revalidate ? 'no-cache' : 'public, max-age=86400',
     });
 
     if (req.method === 'HEAD') {

@@ -36,6 +36,7 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 92px;
+  scrollbar-gutter: stable;
 }
 
 body {
@@ -91,6 +92,7 @@ ol {
 img {
   display: block;
   max-width: 100%;
+  height: auto;
 }
 
 a {
@@ -2027,6 +2029,10 @@ button {
     margin-inline: auto;
   }
 
+  .quick-add {
+    transform: none;
+  }
+
   .hero-seal {
     left: -1rem;
     top: -1rem;
@@ -2105,7 +2111,7 @@ button {
   }
 
   .hero-title {
-    font-size: clamp(2.9rem, 12.5vw, 4.2rem);
+    font-size: clamp(2.55rem, 12vw, 4.2rem);
     max-width: none;
   }
 

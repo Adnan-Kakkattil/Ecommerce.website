@@ -146,7 +146,6 @@ function addToBag(id) {
   persistBag();
   renderCart();
   pulseCount();
-  toast(`${product.name} added to your bag`);
   openCart();
 }
 
@@ -167,7 +166,6 @@ function removeItem(id) {
   bag = bag.filter((item) => item.id !== id);
   persistBag();
   renderCart();
-  toast('Removed from your bag');
 }
 
 function pulseCount() {
@@ -307,6 +305,7 @@ document.addEventListener('keydown', (event) => {
     return;
   }
   if (cartEl.classList.contains('is-open')) keepFocusInside(event, cartEl);
+  else if (menuEl.classList.contains('is-open')) keepFocusInside(event, menuEl);
 });
 
 /* ---------- newsletter ---------- */
