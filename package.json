@@ -1,0 +1,15 @@
+{
+  "name": "taqwi",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Taqwi — considered objects for a quiet life.",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
